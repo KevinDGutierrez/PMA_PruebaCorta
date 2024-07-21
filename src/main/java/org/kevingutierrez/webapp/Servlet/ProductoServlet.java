@@ -56,7 +56,7 @@ public class ProductoServlet extends HttpServlet {
         
         String path = req.getPathInfo();
         
-        if(path != null || path.equals("/")){
+        if(path == null || path.equals("/")){
             agregarProducto(req, resp);
         }else{
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
